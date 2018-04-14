@@ -15,7 +15,7 @@ This class uses Timer1. Therefore, it conflicts with Servo library, Timer1 libra
 
 ***
 # PWMeter (日本語)
-Arduiono UNO / Pro Mini用の、パルス幅測定クラスライブラリです。
+Arduiono UNO / Pro Mini用の、パルス幅計測クラスライブラリです。
 
 ## ターゲット
 このクラスは、ATmega328P登載のArduino (Arduino UNO、Arduino Pro Miniなど) 専用です。
@@ -24,7 +24,7 @@ Arduiono UNO / Pro Mini用の、パルス幅測定クラスライブラリです
 パルス入力は、#8ピン (PB0/ICP1) 固定です。
 
 ## 測定精度
-測定値は16ビットです。最下位ビットが1usecに相当します。つまり、0～65535usecのパルス幅に対応しています。
+計測値は16ビットです。最下位ビットが1usecに相当します。つまり、0～65535usecのパルス幅に対応しています。
 
 ## 注意点
 このクラスはTimer1を使用しています。そのため、Servoライブラリ、Timer1ライブラリ、およびピン#3、#11のPWM出力と競合します。
