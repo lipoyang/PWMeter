@@ -8,7 +8,7 @@ This class is just for ATmega328P Arduinos (Arduino UNO, Arduino Pro Mini and so
 The pulse input is fixed to the pin #8 (PB0/ICP1).
 
 ## Resolution
-The measured value is 16 bits wide. LSB is equivalent to 1usec. Then, 0 to 65535 usec pulse width is supported.
+LSB is equivalent to 1usec. 16MHz-clock board (like as Arduino UNO and Pro Mini(5V)) can measure 0 to 32767 usec pulse. 8MHz-clock board (like as Arduino Pro Mini(3.3V)) can measure 0 to 65535 usec pulse.
 
 ## Notes
 This class uses Timer1. Therefore, it conflicts with Servo library, Timer1 library, and PWM output of pin #3 and #11.  
@@ -23,8 +23,8 @@ Arduiono UNO / Pro Mini用の、パルス幅計測クラスライブラリです
 ## 入力
 パルス入力は、#8ピン (PB0/ICP1) 固定です。
 
-## 測定精度
-計測値は16ビットです。最下位ビットが1usecに相当します。つまり、0～65535usecのパルス幅に対応しています。
+## 計測精度
+最下位ビットが1usecに相当します。Arduino UNO や Pro Mini(5V)など16MHzクロックのボードでは、0～32767usecのパルスを計測できます。Arduino Pro Mini(3.3V)など8MHzクロックのボードでは、0～65535usecのパルスを計測できます。
 
 ## 注意点
 このクラスはTimer1を使用しています。そのため、Servoライブラリ、Timer1ライブラリ、およびピン#3、#11のPWM出力と競合します。
