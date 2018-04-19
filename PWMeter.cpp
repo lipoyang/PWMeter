@@ -2,7 +2,7 @@
 #include <Arduino.h>
 #include "PWMeter.h"
 
-static PWMeter* s_meter;
+static PWMeter* s_meter = NULL;
 
 // waiting for rising edge or falling edge?
 enum{
@@ -15,7 +15,7 @@ enum{
  */
 ISR(TIMER1_CAPT_vect)
 {
-	s_meter->isr();
+	if(s_meter != NULL) s_meter->isr();
 }
 
 /*
