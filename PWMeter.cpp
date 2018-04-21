@@ -119,7 +119,7 @@ uint16_t PWMeter::get()
 	
 	// CPU clock = 16MHz or 8MHz?
 	if(F_CPU == 16000000UL){
-		ret /= 2; // 0.5usec count => 1usec count
+		if(ret != 0xFFFF) ret /= 2; // 0.5usec count => 1usec count
 	}
 	
 	return ret;
@@ -149,7 +149,7 @@ uint16_t PWMeter::getLast()
 	
 	// CPU clock = 16MHz or 8MHz?
 	if(F_CPU == 16000000UL){
-		ret /= 2; // 0.5usec count => 1usec count
+		if(ret != 0xFFFF) ret /= 2; // 0.5usec count => 1usec count
 	}
 	
 	return ret;
